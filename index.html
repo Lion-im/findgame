@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style type="text/css">
+      .hei-25{height: 25px}.hei-35{height: 35px}
+      .hei-50{height: 50px}.hei-80{height: 80px}.hei-85{height: 85px}
+      .hei-90{height: 90px}.hei-100{height: 100px}.hei-150{height: 150px}
+      .hei-300{height: 300px} .hei-350{height: 350px}.hei-400{height: 400px}
+      .hei-450{height: 450px}
+      .hei-500{height: 500px}.hei-550{height: 550px}.hei-575{height: 575px}
+      .hei-600{height: 600px}.hei-650{height: 650px}.hei-700{height: 700px}
+      .hei-800{height: 800px}.hei-850{height: 850px}.hei-900{height: 900px}
+      .hei-950{height: 950px}.hei-1000{height: 1000px}.hei-1050{height: 1050px}
+      .hei-1100{height: 1100px}.hei-1150{height: 1150px}.hei-1200{height: 1200px}
+      .hei-1250{height: 1250px}.hei-1300{height: 1300px}.hei-1350{height: 1350px}
+
+      .hei-spec1{height: 88px}
+
+      .wdth-25{width: 25px}.wdth-35{width: 35px}.wdth-50{width: 50px}.wdth-100{width: 100px}
+
+      .disp-non{display: none;}
+
+      .pos-abs{position: absolute;}
+
+      .Sneshinka-img{position: absolute; bottom: 200px; left: 350px;}
+      .beliGus-img{position: absolute; top: 750px; left: 850px;}
+      .Derevo-img{position: absolute; top: 100px; left: 1200px;}
+      .sned-img{position: absolute; bottom: 300px; left: 950px;}
+      .ice-img{position: absolute; bottom: 50px; left: 1000px;}
+      .cloud-img{position: absolute; top: 5px; left: 500px;}
+
+      .govik-img{position: absolute; top: 500px; left: 1200px;}
+
+
+      .win{position: absolute; top: 100px; left: 700px;
+        width: 500px; height: 500px; background-image: url(smile.jpeg);
+        display: none;
+      }
+    </style>
+    <div class="win text-center">
+      <h1>You win</h1>
+    </div>
+  <body class="">
+    <div class="spisok col-2 hei-950 pos-abs" style="background-image: url(ajh.jpeg);">
+      <h1>
+        <p class="beliGus">Белый Гусь</p>
+        <p class="Sneshinka">Снежинка</p>
+        <p class="Derevo">Дерево</p>
+        <p class="sneg">Кучка Снега</p>
+        <p class="ice">Лёд</p>
+        <p class="cloud">Облако</p>
+      </h1>
+      <h1 class="scores">0</h1>
+  </div>
+    <div class="col-8 hei-950 mx-auto" style="background-image: url(bgOsnova.jpeg); background-size: 100% 100%;"></div>
+      <img src="gouse.png" class="beliGus-img wdth-50 hei-50">
+      <img src="sneshinka.png" class="Sneshinka-img wdth-35 hei-35 opacity-75">
+      <img src="tree.png" class="Derevo-img wdth-150 hei-500 opacity-75">
+      <img src="sneg.png" class="sned-img wdth-100 hei-100">
+      <img src="ice.png" class="ice-img wdth-150 hei-150 opacity-50">
+      <img src="cloud.png" class="cloud-img wdth-10 hei-100">
+
+      <img src="govik.png" class="govik-img wdth-10 hei-100">
+
+    <script type="text/javascript">
+        let score = 0
+        let textScr = document.querySelector(".scores")
+        document.querySelector(".beliGus-img").onclick = function(){
+            document.querySelector(".beliGus-img").style.display = "none"
+            score+=1
+            textScr.innerHTML=score
+            document.querySelector(".beliGus").style.textDecoration = "line-through"
+            if(score==6){
+               document.querySelector(".win").style.display = "block"
+            }
+        }
+        document.querySelector(".Sneshinka-img").onclick = function(){
+            document.querySelector(".Sneshinka-img").style.display = "none"
+            score+=1
+            textScr.innerHTML=score
+            document.querySelector(".Sneshinka").style.textDecoration = "line-through"
+            if(score==6){
+               document.querySelector(".win").style.display = "block"
+            }
+        }
+        document.querySelector(".Derevo-img").onclick = function(){
+            document.querySelector(".Derevo-img").style.display = "none"
+            score+=1
+            textScr.innerHTML=score
+            document.querySelector(".Derevo").style.textDecoration = "line-through"
+            if(score==6){
+               document.querySelector(".win").style.display = "block"
+            }
+        }
+        document.querySelector(".sned-img").onclick = function(){
+            document.querySelector(".sned-img").style.display = "none"
+            score+=1
+            textScr.innerHTML=score
+            document.querySelector(".sneg").style.textDecoration = "line-through"
+            if(score==6){
+               document.querySelector(".win").style.display = "block"
+            }
+        }
+        document.querySelector(".ice-img").onclick = function(){
+            document.querySelector(".ice-img").style.display = "none"
+            score+=1
+            textScr.innerHTML=score
+            document.querySelector(".ice").style.textDecoration = "line-through"
+            if(score==6){
+               document.querySelector(".win").style.display = "block"
+            }
+        }
+        document.querySelector(".cloud-img").onclick = function(){
+            document.querySelector(".cloud-img").style.display = "none"
+            score+=1
+            textScr.innerHTML=score
+            document.querySelector(".cloud").style.textDecoration = "line-through"
+            if(score==6){
+               document.querySelector(".win").style.display = "block"
+            }
+        }
+
+    </script>
+  </body>
+</html>
